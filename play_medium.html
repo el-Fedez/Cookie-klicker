@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicke medium</title>
+    <link rel="manifest" href="manifest.json">
+
+
+    <style> 
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .abstand1 {
+            margin-top: 5px;
+        }
+
+        .abstand2 {
+            margin-top: 1px;
+        }
+
+        .cookies-ort {
+            font-size: 30px;
+            color: rgb(66, 41, 8);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .ort {
+            font-size: 25px;
+            color: rgb(62, 39, 9);
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <script>
+        cookies = 0
+        clicktime = 1
+        grand = 0
+        bäckerei = 0
+        adding = 0
+        konz = 0
+        nue = 0
+        oreos = 0
+        fcty = 280000
+        timer = false
+        secons = 0
+        minutes = 0
+        houers = 0
+
+
+
+        setInterval(function() {
+            if (timer) {
+                secons = secons + 1;
+                if (secons > 59) {
+                    secons = 0;
+                    minutes = minutes + 1;
+                }
+                if (minutes > 59) {
+                    minutes = 0;
+                    houers = houers + 1;
+                }
+                let text2 = "Time: " + houers + ":" + minutes + ":" + secons;
+                zeit.innerHTML = text2;
+            }
+        }, 1000);
+
+        setInterval(function() {
+            let Klickbate = "Pro klick: " + clicktime;
+            was_pro_klick.innerHTML = Klickbate;
+        }, 100);
+
+
+
+        setInterval(function() {
+            let text = cookies + ' Cookies';
+            kekse.innerHTML = text;
+        }, 10);
+
+
+
+        function Click() {
+            cookies = cookies + clicktime;
+            timer = true
+        }
+
+
+
+        function extra1() {
+            if (cookies >= 200) {
+                cookies = cookies - 200
+                clicktime = clicktime + 1
+            }
+        }
+
+
+
+        function grandma() {
+            if (cookies >= 2000) {
+                cookies = cookies - 2000
+                grand = grand + 11
+            }
+        }
+        setInterval(function() {
+            cookies = cookies + grand
+        }, 1000);
+
+
+
+        function bakery() {
+            if (cookies >= 10000) {
+                cookies = cookies - 10000
+                bäckerei = bäckerei + 255
+            }
+        }
+        setInterval(function() {
+            cookies = cookies + bäckerei
+        }, 10000);
+
+
+
+        function add() {
+            if (cookies >= 4000) {
+                cookies = cookies - 4000
+                adding = adding + 11
+            }
+        }
+        setInterval(function() {
+            cookies = cookies + adding
+        }, 500);
+
+
+
+        function neo() {
+            if (cookies >= 20000) {
+                cookies = cookies - 20000
+                nue = nue + 53
+            }
+        }
+        setInterval(function() {
+            cookies = cookies + konz
+        }, 1000);
+
+
+
+        function invest() {
+            if (cookies >= 30000) {
+                cookies = cookies - 30000
+                konz = konz + 80
+            }
+        }
+        setInterval(function() {
+            cookies = cookies + nue
+        }, 1000);
+
+
+
+        function Oreo() {
+            if (cookies >= 50000) {
+                cookies = cookies - 50000
+                oreos = oreos + 140
+            }
+        }
+        setInterval(function() {
+            cookies = cookies + oreos
+        }, 1000);
+
+
+        var mintv = 40000
+        var maxtv = 150000
+        function show() {
+            Zufalsz = 0
+            if (cookies >= 100000) {
+                cookies = cookies - 100000
+                var Zufalsz = Math.round(Math.random() * (maxtv - mintv) + mintv)
+                alert("Verdient hast du durch die TV show: " + Zufalsz)
+                cookies = cookies + Zufalsz
+            }
+        }
+
+
+
+        var minf = 2
+        var maxf = 10
+        function Factory() {
+            if (cookies >= 1000000) {
+                cookies = cookies - 1000000
+                var Zzahl = Math.round(Math.random() * (maxf - minf) + minf)
+                Zahl = (fcty * Zzahl)
+                setTimeout(function(){
+                    cookies = cookies + Zahl
+                    alert("Deine Factory ist abgebrannt, sie brachte dir " + Zahl + " Cookies ein")
+                },5000);
+            }
+        }
+
+
+
+        function winner() {
+            if (cookies >= 10000000) {
+                cookies = cookies - 10000000
+                timer = false
+                alert("du bist einer der reichsten Menschen der Welt, du hast gewonnen, du darfst gerne weiterspielen" )
+            }
+        }
+    </script>
+
+</head>
+<body background="img/floor.webp">
+    <div class="center cookies-ort" id="kekse"> 0 </div>
+    <div class="abstand1 center">
+        <img onclick="Click()" src="img/cookie.png">
+    </div>
+    <div class="center ort" id="zeit">
+        Time: 00:00:00
+    </div>
+    <div class="center ort" id="was_pro_klick">
+        Pro klick: 1
+    </div>
+    <div class="abstand2 center">
+        <header>
+            <img onclick="extra1()" src="img_Level2/+1.png">
+            <img onclick="grandma()" src="img_Level2/grandma.png">
+        </header>
+    </div>
+    <div class="abstand2 center">
+        <header>
+            <img onclick="add()" src="img_Level2/Add.png">
+            <img onclick="bakery()" src="img_Level2/Bakery.png">
+        </header>
+    </div>
+    <div class="abstand2 center">
+        <header>
+            <img onclick="neo()" src="img_Level2/neu_r.png">
+            <img onclick="invest()" src="img_Level2/Investor.png">
+        </header>
+    </div>
+    <div class="abstand2 center">
+        <header>
+            <img onclick="Oreo()" src="img_Level2/oreo.png">
+            <img onclick="show()" src="img_Level2/tv.png">
+        </header>
+    </div>
+    <div class="abstand2 center">
+        <header>
+            <img onclick="Factory()" src="img_Level2/factory.png">
+            <img onclick="winner()" src="img_Level2/winn.png">
+        </header>
+    </div>
+</body>
+</html>

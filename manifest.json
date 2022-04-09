@@ -1,0 +1,10 @@
+{
+    "name": "Cookie clicker",
+    "short_name": "Cookie clicker",
+    "theme_color": "#593a0a",
+    "background_color": "#4ce8c3",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/"
+}
